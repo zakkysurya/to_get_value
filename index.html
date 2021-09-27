@@ -7,6 +7,34 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>To Get Value with javascript</h1>
+    <h1>To Get Value - Javascript</h1>
+
+    <form action="">
+      <div>
+        <label for="str">Type here :</label>
+        <textarea id="str" height="300px" width="280px"> </textarea>
+      </div>
+      <br />
+      <hr />
+      <div>
+        <label for="textHere">Your Text Here</label>
+        <div id="textHere" style="color: blue; font-size: 35px"></div>
+      </div>
+      <div>
+        <label for="lengthHere">Your Length Text Here</label>
+        <div id="lengthHere" style="color: red; font-size: 35px"></div>
+      </div>
+    </form>
+    <script>
+      const str = document.querySelector("#str");
+      const textHere = document.querySelector("#textHere");
+      const lengthHere = document.querySelector("#lengthHere");
+
+      str.addEventListener("keyup", function (e) {
+        e.preventDefault();
+        textHere.textContent = this.value;
+        lengthHere.textContent = this.value.length;
+      });
+    </script>
   </body>
 </html>
